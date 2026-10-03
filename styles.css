@@ -1,0 +1,101 @@
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Styles */
+/* body */
+body {
+    background-color: #1E1E2E; 
+    color: #CDD6F4; 
+    font-family: 'Segoe UI', sans-serif; 
+    text-align: center; 
+    padding: 20px;
+}
+
+/* container */
+.container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+/* headings */
+h1 {
+    color: #89B4FA; 
+    font-size: 2.2rem; 
+    margin-bottom: 16px;
+}
+
+h2 {
+    color: #94E2D5;
+    font-size: 1.6rem;
+    margin: 24px 0 12px;
+}
+
+h3 {
+    color: #94E2D5;
+    font-size: 1.3rem;
+    margin: 20px 0 10px;
+}
+
+h4 {
+    color: #94E2D5;
+    font-size: 1.1rem;
+    margin: 16px 0 8px;
+}
+
+h5 {
+    color: #94E2D5;
+    font-size: 0.95rem;
+    margin: 24px 0 8px;
+}
+
+/* paragraph */
+p {
+    font-size: 1rem;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+/* horizontal rule */
+hr {
+    border: 1px solid #555555; 
+    margin: 20px auto; 
+    width: 50%;
+}
+
+/* pre formatted text */
+pre {
+    background-color: #2A2A3E;
+    border: 1px solid #44445A;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    color: #CDD6F4;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+/* image */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0px auto;
+    display: block;
+}
+
+/* link */
+a {
+    color: #74C7EC; 
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline; 
+    color: #89B4FA;
+}
