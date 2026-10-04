@@ -1,46 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <title>
-            My First Web App
-        </title>
-    </head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Sanke</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-    <body style="background-color: #1E1E2E; color: #CDD6F4; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 20px;">
-        <h1 style="color: #89B4FA;">Welcome to My First Web App</h1>
-        <p style="margin-bottom: 2%; font-size: 18px;">
-            Hello, this is my first web application. I am learning how websites are created using HTML.
+  <body>
+    <!-- A simple navigation bar -->
+    <nav>
+      <div class="nav-container">
+        <span class="nav-logo">
+          <img src="sanke-logo.png" alt="Site Logo" />
+        </span>
+        <a href="#" class="logo">SANKE</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#learning">Learning</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="section-header">HELLO, I'M SANKHAPALI</span>
+        <h1>Welcome to My First Web App</h1>
+        <p>
+          I'm a passionate web developer and this is my personal website.
+          Explore my interests, learn about my journey, and get started with
+          your own web development adventure!
         </p>
-    <hr style="border: 1px solid #555555; margin: 20px auto; width: 50%;">
-    <h2 style="color: #94E2D5;">About Me</h2>
-    <p title="A short introduction about me">
-        I currently work as a software developer and have a keen interest in web development. <br>
-        I enjoy learning new technologies and applying them to create useful applications.
-    </p>
-    <h2 style="color: #94E2D5;">My Hobbies</h2>
-    <p>
-        In my free time, I enjoy a variety of hobbies that keep me engaged and entertained. Like:
-    </p>
-    <pre>
-        reading books, 
-        solving puzzles, 
-        and cooking.
-    </pre>
-    <img src="puzzle.png" alt="Puzzle Image" width="300" height="225">
-    <h2 style="color: #94E2D5;">Why I Love Web Development</h2>
-    <p>
-        Web development allows me to combine creativity with technical skills. I love the process of designing user interfaces and bringing ideas to life through code.
-    </p>
-    <h3 style="color: #94E2D5;">My Favourite Part So Far</h3>
-    <p>
-        Seeing the page appear in a browser after writing the HTML is very satisfying
-    </p>
-    <h4 style="color: #94E2D5;">A Helpful Resource</h4>
-    <p> I use 
-        <a href="https://www.w3schools.com/html/" target="_blank" style="color: #74C7EC; text-decoration: none;">W3Schools HTML Tutorials</a>
-        to practice and learn more about HTML.
-    </p>
-    <hr style="border: 1px solid #555555; width: 50%; margin-top: 20px; margin-bottom: 20px;">
-    <h5 style="color: #89B4FA;">Thank You for Visiting!</h5>
-    </body>
+        <a href="#learning" class="btn">Explore my learning</a>
+      </div>
+      <div class="hero-image">
+        <img src="puzzle.png" alt="Puzzle Image" />
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-header">
+        <h2 class="section-header">A little about me</h2>
+        <p title="A short introduction about me" class="section-title">
+          Outside development, I enjoy activities that combine curiosity,
+          patience and creativity.
+        </p>
+      </div>
+
+      <div id="interests" class="hobbies-grid">
+        <div class="hobby-card">
+          <span class="card-icon">📖</span>
+          <h3>Reading books</h3>
+          <p>
+            Reading lets me explore new ideas, learn from different perspectives
+            and relax.
+          </p>
+        </div>
+        <div class="hobby-card">
+          <span class="card-icon">+</span>
+          <h3>Solving puzzles</h3>
+          <p>
+            I enjoy the challenge of finding patterns and working towards a
+            complete solution.
+          </p>
+        </div>
+        <div class="hobby-card">
+          <span class="card-icon">🍳</span>
+          <h3>Cooking</h3>
+          <p>
+            Cooking gives me another way to experiment, create and share
+            something enjoyable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Learning Section -->
+    <section id="learning" class="learning">
+      <div>
+        <h2 class="section-header">My Learning Journey</h2>
+        <p title="A short introduction about my learning" class="section-title">
+          I'm constantly learning and improving my skills in web development.
+        </p>
+      </div>
+
+      <div class="learning-grid">
+        <div class="code-block">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <pre>
+            <code>
+              <!-- 
+                < (less than) = &lt;
+                > (greater than) = &gt;
+                -->
+              <span class="ct-blue">&lt;section&gt;</span>
+
+              <span class="ct-green">&lt;h2&gt;</span>Keep Learning<span class="ct-green">&lt;/h2&gt;</span>
+
+              <span class="ct-green">&lt;p&gt;</span>Continue your web development journey with these resources and tips.</span>
+
+              <span class="ct-green">&lt;/p&gt;</span>
+            </code>
+          </pre>
+        </div>
+
+        <div class="learning-text">
+          <!-- <p class="section-title">MY FAVORITE PART SO FAR</p> -->
+          <h2>Bringing ideas to life with code</h2>
+          <p>Seeing a page appear in the browser after writing the html & css is very satisfying. Web development is where creativity meets technical skills.</p>
+          <h4>Resources I use to learn:</h4>
+          <p>
+            I use <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+            to practise and learn more about HTML & CSS.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <h5>Thank you for visiting!</h5>
+      <p>Designed with HTML & CSS</p>
+    </footer>
+
+  </body>
 </html>
