@@ -8,18 +8,18 @@
 /* CSS Styles */
 /* body */
 body {
-    background-color: #1E1E2E; 
-    color: #CDD6F4; 
-    font-family: 'Segoe UI', sans-serif; 
-    text-align: center; 
-    padding: 20px;
+    background-color: #0f1119;; 
+    color: #cdd6f4; 
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* container */
-.container {
-    max-width: 800px; 
-    margin: 0 auto; 
-    padding: 20px;
+/* navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    border-bottom: 1px solid #44445A;
 }
 
 /* headings */
