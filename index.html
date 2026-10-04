@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>My First Web App</title>
+    <title>Sanke</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -11,20 +11,22 @@
     <!-- A simple navigation bar -->
     <nav>
       <div class="nav-container">
-        <span class="nav-logo">+</span>
-        <a href="#" class="logo">My First Web App</a>
+        <span class="nav-logo">
+          <img src="sanke-logo.png" alt="Site Logo" />
+        </span>
+        <a href="#" class="logo">SANKE</a>
       </div>
       <ul class="nav-links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Interests</a></li>
-        <li><a href="#">Learning</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#learning">Learning</a></li>
       </ul>
     </nav>
 
     <!-- Hero section -->
     <section class="hero">
       <div class="hero-text">
-        <p class="section-title">HELLO, I'M SANKHAPALI</p>
+        <span class="section-header">HELLO, I'M SANKHAPALI</span>
         <h1>Welcome to My First Web App</h1>
         <p>
           I'm a passionate web developer and this is my personal website.
@@ -43,15 +45,11 @@
     <!-- About Section -->
     <section id="about" class="about">
       <div class="about-header">
-        <h2>A little about me</h2>
+        <h2 class="section-header">A little about me</h2>
         <p title="A short introduction about me" class="section-title">
           Outside development, I enjoy activities that combine curiosity,
           patience and creativity.
         </p>
-        <!-- <p title="A short introduction about me">
-            Outside development, I enjoy activities that combine
-            curiosity, patience and creativity.
-          </p> -->
       </div>
 
       <div id="interests" class="hobbies-grid">
@@ -86,8 +84,8 @@
 
     <!-- Learning Section -->
     <section id="learning" class="learning">
-      <div class="learning-header">
-        <h2>My Learning Journey</h2>
+      <div>
+        <h2 class="section-header">My Learning Journey</h2>
         <p title="A short introduction about my learning" class="section-title">
           I'm constantly learning and improving my skills in web development.
         </p>
@@ -106,17 +104,17 @@
                 -->
               <span class="ct-blue">&lt;section&gt;</span>
 
-              <span class="ct-teal">&lt;h2&gt;</span>Keep Learning<span class="ct-teal">&lt;/h2&gt;</span>
+              <span class="ct-green">&lt;h2&gt;</span>Keep Learning<span class="ct-green">&lt;/h2&gt;</span>
 
-              <span class="ct-teal">&lt;p&gt;</span>Continue your web development journey with these resources and tips.</span>
+              <span class="ct-green">&lt;p&gt;</span>Continue your web development journey with these resources and tips.</span>
 
-              <span class="ct-teal">&lt;/p&gt;</span>
+              <span class="ct-green">&lt;/p&gt;</span>
             </code>
           </pre>
         </div>
 
         <div class="learning-text">
-          <p class="section-title">MY FAVORITE PART SO FAR</p>
+          <!-- <p class="section-title">MY FAVORITE PART SO FAR</p> -->
           <h2>Bringing ideas to life with code</h2>
           <p>Seeing a page appear in the browser after writing the html & css is very satisfying. Web development is where creativity meets technical skills.</p>
           <h4>Resources I use to learn:</h4>

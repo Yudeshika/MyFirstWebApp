@@ -13,6 +13,11 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
+a {
+    text-decoration: none; 
+    color: #cdd6f4;
+}
+
 /* navigation */
 nav {
     display: flex;
@@ -22,35 +27,128 @@ nav {
     border-bottom: 1px solid #44445A;
 }
 
-/* headings */
-h1 {
-    color: #89B4FA; 
-    font-size: 2.2rem; 
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.nav-logo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #cdd6f4; 
+    font-size: 0.95rem;
+}
+
+.nav-links li a:hover {
+    color: #74C7EC; 
+}
+
+/* section header */
+.section-header {
+    color: #74C7EC;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
     margin-bottom: 16px;
 }
 
-h2 {
+/* hero section */
+.hero {
+    display:grid;
+    grid-template-columns: 1fr 1fr; /* specify the number of columns in a grid layout*/
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #CDD6F4;
+    margin-bottom: 24px;
+}
+
+.hero h2 {
     color: #94E2D5;
     font-size: 1.6rem;
     margin: 24px 0 12px;
 }
 
-h3 {
+.hero h3 {
     color: #94E2D5;
     font-size: 1.3rem;
     margin: 20px 0 10px;
 }
 
-h4 {
+.hero h4 {
     color: #94E2D5;
     font-size: 1.1rem;
     margin: 16px 0 8px;
 }
 
-h5 {
+.hero h5 {
     color: #94E2D5;
     font-size: 0.95rem;
     margin: 24px 0 8px;
+}
+
+.hero-text p {
+    color: #8892AA;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.highlight {
+    color: #74C7EC;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    display: block;
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    border: 1px solid #CDD6F4;
+    color: #CDD6F4;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #CDD6F4;
+    color: #0F1119;
 }
 
 /* paragraph */
@@ -62,13 +160,14 @@ p {
 
 /* horizontal rule */
 hr {
-    border: 1px solid #555555; 
-    margin: 20px auto; 
-    width: 50%;
+    border: none; 
+    margin: 0 auto; 
+    border-top: 1px solid #1E2235;
+    max-width: 80%;
 }
 
 /* pre formatted text */
-pre {
+/* pre {
     background-color: #2A2A3E;
     border: 1px solid #44445A;
     border-radius: 8px;
@@ -78,24 +177,225 @@ pre {
     color: #CDD6F4;
     white-space: pre-wrap;
     text-align: left;
-}
-
-/* image */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 0px auto;
-    display: block;
-}
+} */
 
 /* link */
-a {
+/* a {
     color: #74C7EC; 
     text-decoration: none; 
-}
+} */
 
-a:hover {
+/* a:hover {
     text-decoration: underline; 
     color: #89B4FA;
+} */
+
+/* about section */
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.about-header {
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+.about-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding-top: 6px;
+}
+
+/* hobbies grid */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.hobby-card {
+    background-color: #171926;
+    border: 1px solid #1e2235;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.card-icon {
+    align-items: center;
+    justify-content: center;
+    background-color: #1E2235;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+.hobby-card h3 {
+    color: #CDD6F4;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.hobby-card p {
+    color: #8892AA;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* learning section */
+.learning {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    background-color: #171926;
+    border: 1px solid #1E2235;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.code-block {
+    background-color: #0F1119;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.code-dots {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.code-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #2A2D3E;
+}
+
+.code-block pre {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: #CDD6F4;
+    white-space: pre-wrap;
+}
+
+.ct-blue {
+    color: #89B4FA;
+}
+
+.ct-green {
+    color: #94E2D5;
+}
+
+.learning-text h2 {
+    font-size: 2rem;
+    color: #CDD6F4;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.learning-text h4 {
+    font-size: 0.75rem;
+    color: #CDD6F4;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.learning-text p {
+    font-size: 1rem;
+    color: #8892AA;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.learning-text a {
+    color: #74C7EC;
+    text-decoration: none;
+}
+
+.learning-text a:hover {
+    text-decoration: underline;
+    color: #89B4FA;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    border-top: 1px solid #1E2235;
+    margin-top: 40px;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+    nav {
+        padding: 14px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 32px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        order: -1; /* Move the image above the text on smaller screens */
+    }
+
+    .about {
+        padding: 40px 20px;
+    }
+
+    .about-header {
+        gap: 16px;
+        grid-template-columns: 1fr; /* Stack the header content vertically */
+    }
+
+    .hobbies-grid {
+        grid-template-columns: 1fr; /* Stack hobby cards vertically */
+    }
+
+    .learning {
+        padding: 40px 20px;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr; /* Stack learning content vertically */
+        padding: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+    }
 }
