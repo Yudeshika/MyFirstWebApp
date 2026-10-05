@@ -13,6 +13,23 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    background-color: #171926;
+    border: 1px solid #1E2235;
+    border-radius: 8px;
+    padding: 40px;
+}
+
 a {
     text-decoration: none; 
     color: #cdd6f4;
@@ -28,12 +45,6 @@ nav {
 }
 
 .nav-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.nav-brand {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -79,8 +90,6 @@ nav {
     grid-template-columns: 1fr 1fr; /* specify the number of columns in a grid layout*/
     gap: 60px;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 80px 20px;
 }
 
@@ -166,36 +175,7 @@ hr {
     max-width: 80%;
 }
 
-/* pre formatted text */
-/* pre {
-    background-color: #2A2A3E;
-    border: 1px solid #44445A;
-    border-radius: 8px;
-    padding: 16px 24px;
-    font-family: 'Courier New', monospace;
-    font-size: 16px;
-    color: #CDD6F4;
-    white-space: pre-wrap;
-    text-align: left;
-} */
-
-/* link */
-/* a {
-    color: #74C7EC; 
-    text-decoration: none; 
-} */
-
-/* a:hover {
-    text-decoration: underline; 
-    color: #89B4FA;
-} */
-
 /* about section */
-.about {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 40px;
-}
 
 .about-header {
     gap: 40px;
@@ -248,23 +228,6 @@ hr {
 }
 
 /* learning section */
-.learning {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 40px;
-}
-
-.learning-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-    background-color: #171926;
-    border: 1px solid #1E2235;
-    border-radius: 8px;
-    padding: 40px;
-}
-
 .code-block {
     background-color: #0F1119;
     border-radius: 12px;
@@ -344,6 +307,158 @@ footer {
     margin-top: 40px;
 }
 
+/* contact section */
+.contact-grid {
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #CDD6F4;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #8892AA;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.required {
+    color: #74C7EC;
+}
+
+/* form card */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-top: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: #CDD6F4;
+}
+
+/* form inputs */
+input[type="text"],
+input[type="email"],
+select,textarea {
+    background-color: #0F1119;
+    border: 1px solid #2A2D3E;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #CDD6F4;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,textarea:focus {
+    border-color: #74C7EC;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #4A4D5E;
+}
+
+.input-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0F1119;
+    border: 1px solid #2A2D3E;
+    border-radius: 8px;
+    padding: 10px 14px;
+    flex: 1;
+    color: #CDD6F4;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+select {
+    appearance: none; /* Remove default arrow */
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* form footer */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: #74C7EC;
+    color: #0F1119;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-primary:hover {
+    background-color: #89B4FA;
+}
+
+.btn-secondary {
+    background: none;
+    color: #CDD6F4;
+    border: 1px solid #2A2D3E;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-secondary:hover {
+    border-color: #CDD6F4;
+}
+
 /* media queries */
 @media (max-width: 768px) {
     nav {
@@ -390,6 +505,31 @@ footer {
     .learning-grid {
         grid-template-columns: 1fr; /* Stack learning content vertically */
         padding: 20px;
+    }
+
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr; /* Stack form fields vertically */
+    }
+
+    .radio-group {
+        flex-direction: column; /* Stack radio buttons vertically */
+    }
+
+    .form-footer {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     footer {
