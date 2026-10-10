@@ -42,14 +42,22 @@ const topicSets = {
     technology: ['Web Development', 'AI', 'Cloud Computing', 'Cyber Security', 'Open Source'],
     book: ['Fiction', 'Non-Fiction', 'Self-Help', 'Biography', 'Science Fiction'],
     puzzle: ['Sudoku', 'Crossword', 'Jigsaw', 'Logic Puzzle', 'Brain Teaser'],
-    other: ['General Inquiry', 'Feedback', 'Collaboration', 'Other']
+    other: ['General Inquiry', 'Feedback', 'Collaboration', 'Say Hello']
 }
 
 function updateTopics(reason) {
-    const topics = topicSets[reason] || topicSets['other'];
+    const topicsGroup = document.getElementById('topics-group');
     const checkboxGroup = document.getElementById('topics');
 
     checkboxGroup.innerHTML = ''; // Clear existing checkboxes
+
+    if (!reason) {
+        topicsGroup.style.display = 'none'; // Hide the topics group if no reason is selected
+        return;
+    }
+
+    topicsGroup.style.display = 'block'; // Show the topics group when a reason is selected
+    const topics = topicSets[reason] || topicSets['other'];
 
     topics.forEach(function(topic) {
         const label = document.createElement('label');
@@ -76,9 +84,14 @@ contactForm.addEventListener('submit', function(event) {
     const visitorName = document.getElementById('name').value.trim();
 
     formMessage.textContent = `Thank you, ${visitorName}. for Demo purposes only - in a real application your message would be sent here..`;
+
+    setTimeout(function() {
+        formMessage.textContent = ''; // Clear the message after 5 seconds
+    }, 5000);
+
     this.reset(); // Reset the form fields
     charCount.textContent = `0/${maxLength}`; // Reset character count
     charCount.style.color = ''; // Reset color
-    updateTopics('other'); // Reset topics to default
+    updateTopics(''); // Reset topics
 
 });
