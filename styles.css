@@ -478,6 +478,31 @@ textarea {
     display: none; /* Hide the topics group initially */
 }
 
+/* Quote Section */
+.quote-card {
+    background-color: #171926;
+    border: 1px solid #1E2235;
+    border-radius: 5%;
+    padding: 32px 40px;
+    text-align: center;
+    max-width: 700px;
+    margin: 24px auto 0;
+}
+
+#quote-text{
+    font-size: 1.2rem;
+    color: #CDD6F4;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+#quote-author {
+    color: #74C7EC;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
 /* media queries */
 @media (max-width: 768px) {
     nav {
