@@ -95,3 +95,19 @@ contactForm.addEventListener('submit', function(event) {
     updateTopics(''); // Reset topics
 
 });
+
+// Fetch a random quote from Quotable API
+function fetchQUote() {
+    fetch('https://api.freeapi.app/api/v1/public/quotes/quote/random')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(content) {
+        document.getElementById('quote-text').textContent = '"' + content.data.content + '"';
+        document.getElementById('quote-author').textContent = '"' + content.data.author + '"';
+    })
+}
+
+fetchQUote(); // Load a quote when the page loads
+
+document.getElementById('new-quote-btn').addEventListener('click', fetchQUote);
