@@ -389,6 +389,7 @@ textarea::placeholder {
     color: #CDD6F4;
     font-size: 1rem;
     cursor: pointer;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 select {
@@ -457,6 +458,20 @@ textarea {
 
 .btn-secondary:hover {
     border-color: #CDD6F4;
+}
+
+#char-count {
+    font-size: 0.85rem;
+    color: #4A4D5E;
+    margin-top: 4px;
+    text-align: right;
+}
+
+#form-message {
+    font-size: 1rem;
+    color: #74C7EC;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 /* media queries */
