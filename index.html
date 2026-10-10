@@ -20,6 +20,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#interests">Interests</a></li>
         <li><a href="#learning">Learning</a></li>
+        <li><a href="#contact">Get in touch</a></li>
       </ul>
     </nav>
 
@@ -34,6 +35,7 @@
           your own web development adventure!
         </p>
         <a href="#learning" class="btn">Explore my learning</a>
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
       </div>
       <div class="hero-image">
         <img src="puzzle.png" alt="Puzzle Image" />
@@ -46,7 +48,7 @@
     <section id="about" class="about">
       <div class="about-header">
         <h2 class="section-header">A little about me</h2>
-        <p title="A short introduction about me" class="section-title">
+        <p title="A short introduction about me">
           Outside development, I enjoy activities that combine curiosity,
           patience and creativity.
         </p>
@@ -86,12 +88,12 @@
     <section id="learning" class="learning">
       <div>
         <h2 class="section-header">My Learning Journey</h2>
-        <p title="A short introduction about my learning" class="section-title">
+        <p title="A short introduction about my learning">
           I'm constantly learning and improving my skills in web development.
         </p>
       </div>
 
-      <div class="learning-grid">
+      <div class="card">
         <div class="code-block">
           <div class="code-dots">
             <span></span><span></span><span></span>
@@ -114,7 +116,6 @@
         </div>
 
         <div class="learning-text">
-          <!-- <p class="section-title">MY FAVORITE PART SO FAR</p> -->
           <h2>Bringing ideas to life with code</h2>
           <p>Seeing a page appear in the browser after writing the html & css is very satisfying. Web development is where creativity meets technical skills.</p>
           <h4>Resources I use to learn:</h4>
@@ -126,11 +127,86 @@
       </div>
     </section>
 
+    <hr />
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div>
+        <h2 class="section-header">Get in Touch</h2>
+        <p title="A short introduction about my learning">
+          Would you like to discuss technology, recommend a book or puzzle, or just say hello? I would like to hear from you.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <p id="form-message"></p>
+        <form class="contact-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="name">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="janedoe@example.com" required />
+            </div>
+          </div>
+
+          <!-- I will dynamically update the form depending on the selected answer with JS -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Reason for contacting me</label>
+              <select id="reason" name="reason">
+                <option value="" disabled selected>Choose a Reason</option>
+                <option value="technology">Discuss a technology/s</option>
+                <option value="book">Recommend a book/s</option>
+                <option value="puzzle">Recommend a puzzle/s</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Preferred Response</label>
+              <div class="radio-group">
+                <label class="input-label">
+                  <input type="radio" name="response" value="email" checked /> Email
+                </label>
+                <label class="input-label">
+                  <input type="radio" name="response" value="none" /> No Response Needed
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group" id="topics-group">
+              <label>Topics you are interested in</label>
+              <div class="checkbox-group" id="topics">
+                <!-- Checkboxes will be dynamically added here by JavaScript -->
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea name="message" id="message" placeholder="Write your message here..." rows="4" maxlength="300" required></textarea>
+              <span id="char-count">0/300</span>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="reset" class="btn-secondary">Clear Form</button>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
       <h5>Thank you for visiting!</h5>
       <p>Designed with HTML & CSS</p>
     </footer>
 
+    <script src="script.js"></script>
   </body>
 </html>
